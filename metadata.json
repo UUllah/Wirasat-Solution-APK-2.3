@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Warasat Solutions",
+  "description": "A comprehensive Android-styled web application for resolving property disputes among inheritors, featuring Shariah-compliant calculations, AI-powered valuation, and historical market trend analysis.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
