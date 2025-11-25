@@ -29,6 +29,8 @@ jobs:
         run: npm install
 
       - name: Build Web App
+        env:
+           CI: false
         run: npm run build
 
       - name: Initialize Android Project
@@ -38,6 +40,8 @@ jobs:
       - name: Build APK (Debug)
         run: |
           cd android
+          # Accept licenses to prevent build failure
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
           chmod +x gradlew
           ./gradlew assembleDebug
 
